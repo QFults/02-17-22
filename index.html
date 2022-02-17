@@ -10,11 +10,18 @@
 
 <body>
 
-  <ul>
+  <!-- <ul>
     <li>one</li>
     <li id="item2">two</li>
     <li>three</li>
-  </ul>
+  </ul> -->
+
+  <div>one</div>
+  <div>two</div>
+  <div>three</div>
+  <div>four</div>
+
+  <img id="myImg">
 
   <script>
 
@@ -29,6 +36,17 @@
     // document.getElementById('item2').style.color = 'red'
 
     // document.getElementById('item2').textContent = 'Something Different'
+
+    const divTags = document.querySelectorAll('div')
+
+    for (let i = 0; i < divTags.length; i++) {
+      divTags[i].setAttribute('style', 'color: blue; font-size: 40px')
+    }
+
+    const imgTag = document.querySelector('#myImg')
+    // const imgTag = document.getElementById('myImg')
+    imgTag.setAttribute('src', 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih1.redbubble.net%2Fimage.1078010232.3035%2Fbg%2Cf8f8f8-flat%2C750x%2C075%2Cf-pad%2C750x1000%2Cf8f8f8.u1.jpg&f=1&nofb=1')
+    imgTag.setAttribute('alt', 'Rengoku')
 
   </script>
 </body>
